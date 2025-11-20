@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: olivetti-flask
-        image: your_dockerhub_username/olivetti-flask:latest
-        imagePullPolicy: Never # Crucial for local Minikube testing
+        image: mathursahab8897/olivetti-flask:latest
+        imagePullPolicy: Never 
         ports:
         - containerPort: 5000
