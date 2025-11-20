@@ -1,5 +1,10 @@
 __pycache__/
 *.pyc
 .venv/
-.DS_Store
+# Model artifacts and data files
 savedmodel.pth
+test_data.pkl
+# OS/IDE files
+.DS_Store
+# Docker/K8s temp files
+olivetti-image.tar
