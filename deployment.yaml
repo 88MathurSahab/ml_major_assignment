@@ -1,0 +1,23 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olivetti-deployment
+  labels:
+    app: olivetti-flask
+spec:
+  [cite_start]replicas: 3 # Ensure 3 replicas are always running 
+  selector:
+    matchLabels:
+      app: olivetti-flask
+  template:
+    metadata:
+      labels:
+        app: olivetti-flask
+    spec:
+      containers:
+      - name: olivetti-flask
+        image: your_dockerhub_username/olivetti-flask:latest
+        imagePullPolicy: Never # Crucial for local Minikube testing
+        ports:
+        - containerPort: 5000
